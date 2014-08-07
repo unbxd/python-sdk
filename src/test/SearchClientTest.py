@@ -16,7 +16,7 @@ class SearchClientTest(unittest.TestCase):
         response = Unbxd.getSearchClient()
         response = response.search("*", queryParams)
         response = response.addFilter("color_fq","black")
-        response = response.addFilter("Brand_fq", "Ralph Lauren")
+        response = response.addFilter("brand_fq", "Ralph Lauren")
         response = response.addSort("price", "ASC")
         response = response.setPage(2, 5)
         response = response.execute();
@@ -41,7 +41,7 @@ class SearchClientTest(unittest.TestCase):
         response = Unbxd.getSearchClient()
         response = response.browse("1", queryParams)
         response = response.addFilter("color_fq","black")
-        response = response.addFilter("Brand_fq", "Ralph Lauren")
+        response = response.addFilter("brand_fq", "Ralph Lauren")
         response = response.addSort("price", "ASC")
         response = response.setPage(2, 5)
         response = response.execute();
@@ -66,7 +66,7 @@ class SearchClientTest(unittest.TestCase):
         response = Unbxd.getSearchClient()
         response = response.bucket("*", "category", queryParams)
         response = response.addFilter("color_fq","black")
-        response = response.addFilter("Brand_fq", "Ralph Lauren")
+        response = response.addFilter("brand_fq", "Ralph Lauren")
         response = response.addSort("price", "ASC")
         response = response.setPage(2, 5)
         response = response.execute();

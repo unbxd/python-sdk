@@ -6,6 +6,8 @@ from search.response.Stats import Stats
 class SearchResponse(object):
 
     _errorCode = 0
+    _statusCode = 0
+    _queryTime = 0
     _results = None
     
     def __init__(self, params):

@@ -6,7 +6,7 @@ class RecommendationResults:
         
         self._results = []
         for result in params:
-            self._results.add(RecommendationResult(result))
+            self._results.append(RecommendationResult(result))
 
     '''
        @return Number of results
@@ -18,7 +18,7 @@ class RecommendationResults:
         if i >= self._resultsCount:
             return None
         
-        return self._results.get(i)
+        return self._results[i]
 
     '''
        @return List of products. Refer :@link RecommendationResult}

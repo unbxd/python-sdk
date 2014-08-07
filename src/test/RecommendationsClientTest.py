@@ -14,7 +14,7 @@ class RecommendationsClientTest(unittest.TestCase):
         response = response.execute()
         
         self.assertIsNotNone(response)
-        self.assertEquals(0, response.getStatusCode())
+        self.assertEquals(200, response.getStatusCode())
         self.assertEquals("OK", response.getMessage())
         self.assertEquals(6, response.getTotalResultsCount())
         self.assertEquals(6, response.getResults().getResultsCount())

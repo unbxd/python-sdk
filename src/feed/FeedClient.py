@@ -213,7 +213,6 @@ class FeedClient:
             ''' Write the xml to a file '''
             xmlFile = open("/var/tmp/" + self.siteKey + ".xml", "w")
             docDump = ET.tostring(doc)
-            print docDump
             xmlFile.write(docDump)
             xmlFile.close()
             

@@ -2,7 +2,7 @@ from recommendations.response.RecommendationResults import RecommendationResults
 class RecommendationResponse:
 
     def __init__(self, params):
-        if str(params.get("error")) is not None:
+        if params.get("error") is not None:
             self.error = params.get("error")
             self._errorCode = int(self.error.get("code"))
             self._message = str(self.error.get("message"))

@@ -10,7 +10,7 @@ class FeedClientTest(unittest.TestCase):
                         "149abee9a65f0d135cd07c90308c54d4", 
                         "149abee9a65f0d135cd07c90308c54d4")
 
-    def atest_product_upload(self):
+    def test_product_upload(self):
         product = {}
         product["title"] = "phodu joote"
         product["some-field"] = "test-field-value"
@@ -56,7 +56,7 @@ class FeedClientTest(unittest.TestCase):
         self.assertEquals("some-unknown-field", response.getUnknownSchemaFields()[0])
         self.assertEquals(0, len(response.getFieldErrors()))
 
-    def atest_product_upload_should_fail_field_error(self):
+    def test_product_upload_should_fail_field_error(self):
         product = {}
         product["title"] = "phodu joote"
         product["brand"] = "Adidas"
